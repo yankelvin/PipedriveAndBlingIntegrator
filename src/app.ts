@@ -3,7 +3,7 @@ import {config} from './config';
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import routes from "../src/WebApp/routes";
+import routes from "./WebApp/routes";
 
 class App {
     public express: express.Application;
@@ -32,9 +32,6 @@ class App {
 
     private routes(): void {
         this.express.use(routes);
-        this.express.get("/", (req, res) => {
-            return res.send("Tudo ok");
-        })
     }
 }
 
